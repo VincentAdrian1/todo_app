@@ -52,6 +52,7 @@
             color: #66507a; 
             outline: none;
             text-decoration: none;
+            margin-left: 10px;
         }
         
         #search-add-wrapper {
@@ -109,53 +110,83 @@
         }
         
         .card-body {
- padding: 20px;
-}
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
 
-.card-body form {
-  align-items: center;
-  display: flex; /* Arrange labels and inputs side-by-side */
-  flex-wrap: wrap; /* Wrap long lines of labels and inputs */
-  margin: 0 auto; /* Center the form horizontally */
-  width: fit-content; /* Adjust form width as needed */
-}
+        .card-body form {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            width: fit-content;
+        }
 
-.card-body form label {
-    padding-top: 10px;
-  width: 100px; /* Set a fixed width for labels */
-  margin-bottom: 5px; /* Add space between labels and inputs */
-  text-align: right; /* Align labels to the right */
-}
+        .card-body form label {
+            padding-top: 10px;
+            width: 100px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
 
-.card-body form input[type="text"],
-.card-body form input[type="password"] {
-  flex: 1; /* Make inputs take up remaining space */
-  padding: 5px; /* Add padding for better user experience */
-  border: 1px solid #ccc; /* Add a border to the inputs */
-  border-radius: 3px; /* Add rounded corners to the inputs */
-}
+        .card-body form input[type="text"],
+        .card-body form input[type="password"] {
+            flex: 1;
+            padding: 5px; 
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-left: 20px;
+        }
 
-.card-body form .button {
-  padding: 10px 20px; /* Adjust padding for the button */
-  background-color: #333; /* Set button background color */
-  color: #fff; /* Set button text color */
-  border: none; /* Remove border from button */
-  border-radius: 3px; /* Add rounded corners to the button */
-  cursor: pointer; /* Indicate clickable behavior */
-  margin-top: 10px; /* Maintain some space above the button */
-  /* Adjust button width as needed (optional) */
-}
+        .card-body form .button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px; 
+            cursor: pointer;
+            margin-top: 10px;
+        
+        }
 
-.card-body p {
-  text-align: center; /* Center the paragraph text */
-  margin-top: 15px; /* Add space above the paragraph */
-}
+        .card-body p {
+            text-align: center; 
+            margin-top: 15px; 
+        }
 
-.card-body p a {
-  color: #333; /* Set link text color */
-  text-decoration: none; /* Remove underline from the link */
-}
+        .card-body p a {
+            color: #333; 
+            text-decoration: none; 
+        }
+        .task-checkbox {
+            margin-right: 10px; 
+        }
 
+        .task-complete-icon {
+            display: none; 
+        }
+
+        .task-checkbox:checked + .task-title a {
+            text-decoration: line-through; 
+            color: #888; 
+        }
+        .task-controls {
+            display: flex; 
+            align-items: center; 
+        }
+
+        .delete-link {
+            text-decoration: none;
+            font-weight: 900;
+            color: #cf4949;
+            font-size: 22px;
+            line-height: 0;
+            padding: 20px 0px;
+        }
+
+        
     </style>
 </head>
 
